@@ -1,6 +1,6 @@
 import React from 'react';
 import MainLayout from './components/layout/MainLayout/MainLayout';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Homepage from './components/views/Homepage/Homepage';
 import Login from './components/views/Login/Login';
@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter basename={'/panel'}>
       <MainLayout>
-        <Routes>
+        <Switch>
           <Route exact path={`${process.env.PUBLIC_URL}/`} component={Homepage} />
           <Route exact path={`${process.env.PUBLIC_URL}/login`} component={Login} />
           <Route exact path={`${process.env.PUBLIC_URL}/tables`} component={Tables} />
@@ -24,7 +24,7 @@ function App() {
           <Route exact path={`${process.env.PUBLIC_URL}/waiter`} component={Waiter} />
           <Route exact path={`${process.env.PUBLIC_URL}/waiter/order/:id`} component={WaiterOrder} />
           <Route exact path={`${process.env.PUBLIC_URL}/kitchen`} component={Kitchen} />
-        </Routes>
+        </Switch>
       </MainLayout>
     </BrowserRouter>
   );
