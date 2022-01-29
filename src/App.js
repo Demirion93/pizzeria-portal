@@ -9,6 +9,7 @@ import TablesBooking from './components/views/TablesBooking/TablesBooking';
 import TablesEvents from './components/views/TablesEvents/TablesEvents';
 import Waiter from './components/views/Waiter/WaiterContainer';
 import WaiterOrder from './components/views/WaiterOrder/WaiterOrder';
+import WaiterOrderNew from './components/views/WaiterOrder/WaiterOrderNew';
 import Kitchen from './components/views/Kitchen/Kitchen';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Provider } from 'react-redux';
@@ -41,6 +42,7 @@ function App() {
               <Route exact path={`${process.env.PUBLIC_URL}/tables/events/:id`} component={TablesEvents} />
               <Route exact path={`${process.env.PUBLIC_URL}/waiter`} component={Waiter} />
               <Route exact path={`${process.env.PUBLIC_URL}/waiter/order/:id`} component={WaiterOrder} />
+              <Route exact path={`${process.env.PUBLIC_URL}/waiter/order/new`} component={WaiterOrderNew} />
               <Route exact path={`${process.env.PUBLIC_URL}/kitchen`} component={Kitchen} />
             </Switch>
           </MainLayout>
